@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+.notes{font-size:80%; text-align:justify;}
+.terms{padding-left: 10px; padding-right:10px; padding-top:10px;}
+.terms h5{font-size:75%}
+.terms p{font-size:75%; text-align:justify;}
+
+.copyright{padding-left:10px; padding-right:10px;}
+.copyright p{font-size:75%; text-align:center;}
+
+img{display:block;
+margin-left:auto;
+ margin-right:auto;}
