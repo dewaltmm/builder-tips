@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+	xmlns:gap = "http://phonegap.com/ns/1.0"
+	id 	= "org.apawood.builderTips"
+	versionCode = "1"
+	version = "1.0.0">
+
+<name>APA Builder Tips</name>
+<description>This free APA Builder Tips app provides quick resources in the field... 
+APA at Your Service. For additional information on engineered wood products and applications visit the APA website at www.apawood.org.</description>
+
+<author href = "https://www.apawood.org" email="melissa.dewalt@apawood.org">APA - The Engineered Wood Association</author>
+
+
+<preference name="android-minSdkVersion" value="8"/>
+<preference name="permissions" value="none"/>
+<!--<preference name="phonegap-version" value="2.0.0" />-->
+
+<access origin="*" />
+<!--<icon src="img/icons/icon.png"/>
+<gap:splash src="splash.png" width="334" height="480"/>-->
+
+<!--Android Specific Preferences
+<icon src="img/icons/ldpi.png" gap:platform="android" gap:density="ldpi" />
+<icon src="img/icons/mdpi.png" gap:platform="android" gap:density="mdpi" />
+<icon src="img/icons/hdpi.png" gap:platform="android" gap:density="hdpi" />
+<icon src="img/icons/xhdpi.png" gap:platform="android" gap:density="xhdpi" />  -->
+
+<!--Note to Melissa, or Developer working on this project: as of Oct 25, 2012 - Phonegap Build doesn't offer
+any support for landscape splash screens for android. When they do, let's implement these specific tags for
+displays, and include landscape graphics too.
+<gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+<gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+<gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+<gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+-->
+
+</widget>
