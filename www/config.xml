@@ -13,10 +13,10 @@ APA at Your Service. For additional information on engineered wood products and 
 
 
 <preference name="android-minSdkVersion" value="8"/>
-<preference name="permissions" value="none"/>
 <!--<preference name="phonegap-version" value="2.0.0" />-->
 
 <gap:plugin name="ChildBrowser" version="~3"/> <!-- for Cordova (1.9.0+)-->
+<gap:plugin name="WebIntent" />
 
 <access origin="*" />
 <!--<icon src="img/icons/icon.png"/>
