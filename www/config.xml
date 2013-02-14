@@ -34,5 +34,7 @@ displays, and include landscape graphics too.
 <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
 <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 -->
+<plugin name="Downloader" value="com.phonegap.plugins.downloader.Downloader"/>
+<plugin name="PdfViewer" value="com.phonegap.plugins.pdfViewer.PdfViewer"/>
 
 </widget>

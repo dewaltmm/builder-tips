@@ -3,11 +3,16 @@
 <head> 
 	<title>APA Builder Tips</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    
     <link rel="stylesheet" href="css/themes/buildertips.css"/>
     <link rel="stylesheet" href="css/themes/buildertips.min.css" />
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile.structure-1.3.0-rc.1.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile.structure-1.3.0-rc.1.min.css" />
+    
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/pdfviewer.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/downloader.js"></script>
 
 <link rel="stylesheet" href="css/style.css"
     
@@ -19,6 +24,13 @@
 		<h1 style="white-space:normal;">APA Builder Tips</h1>
 	</div><!-- /header -->
 <div data-role="content">   
+
+<p><a href="#" 'pdf/M300.pdf', true, downloadOkCallbak, downloadErCallbak)> Download M300.pdf </a></p>
+<p><a href="#" onclick="window.plugins.pdfViewer.showPdf('pdfs/M300.pdf');"> open pdf M300.pdf</a></p>
+<br>
+<br>
+<br>
+
     
     <ul data-role="listview" data-split-icon="gear" data-filter="true" data-filter-placeholder="Search Builder Tips" data-inset="true" data-theme="a">
     <li><a href="pages/m300.html">
