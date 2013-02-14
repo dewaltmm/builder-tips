@@ -26,7 +26,15 @@
 
 <a data-role="button" href="http://www.apawood.org/buildertips/pdfs/M300.pdf">View PDF from server</a>
 <a data-role="button" href="pdfs/M300.pdf">View local PDF</a>
-<a data-role="button" href="#" data-role="button" rel="external" onClick="window.plugins.childBrowser.showWebPage('http://www.apawood.org/buildertips/pdfs/M300.pdf');">View PDF from server in childbrowser</a><br>
+<a data-role="button" href="#" data-role="button" rel="external" onClick="window.plugins.childBrowser.showWebPage('http://www.apawood.org/buildertips/pdfs/M300.pdf');">View PDF from server in childbrowser</a>
+
+<a data-role="button" href="#" data-role="button" rel="external" onClick="window.plugins.childBrowser.showWebPage(encodeURI('http://docs.google.com/viewer?url=http://www.apawood.org/buildertips/pdfs/M300.pdf'));">View PDF from server in childbrowser w/Google Docs</a>
+
+<a data-role="button" href="#" data-role="button" rel="external" onClick="window.plugins.childBrowser.showWebPage('http://docs.google.com/viewer?url=http://www.apawood.org/buildertips/pdfs/M300.pdf');">View PDF from server in childbrowser w/Google Docs w/o encodeURI</a>
+
+<a data-role="button" href="#" data-role="button" rel="external" onClick="window.plugins.childBrowser.showWebPage(encodeURI('http://docs.google.com/viewer?url=/pdfs/M300.pdf'));">View local PDF in childbrowser w/Google Docs</a>
+
+<br>
     
     <ul data-role="listview" data-split-icon="gear" data-filter="true" data-filter-placeholder="Search Builder Tips" data-inset="true" data-theme="a">
     <li><a href="pages/m300.html">
