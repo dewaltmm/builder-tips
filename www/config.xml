@@ -16,6 +16,8 @@ APA at Your Service. For additional information on engineered wood products and 
 <preference name="permissions" value="none"/>
 <!--<preference name="phonegap-version" value="2.0.0" />-->
 
+<gap:plugin name="ChildBrowser" version="~3"/> <!-- for Cordova (1.9.0+)-->
+
 <access origin="*" />
 <!--<icon src="img/icons/icon.png"/>
 <gap:splash src="splash.png" width="334" height="480"/>-->
@@ -33,8 +35,8 @@ displays, and include landscape graphics too.
 <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
 <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
 <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
--->
-<plugin name="Downloader" value="com.phonegap.plugins.downloader.Downloader"/>
-<plugin name="PdfViewer" value="com.phonegap.plugins.pdfViewer.PdfViewer"/>
 
+<plugin name="Downloader" value="com.phonegap.plugins.downloader.Downloader"/>
+
+<plugin name="PDFViewer" value="<full_name_including_namespace>"/>-->
 </widget>

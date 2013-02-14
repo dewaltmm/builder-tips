@@ -10,9 +10,8 @@
     
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/pdfviewer.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/downloader.js"></script>
+<script src="phonegap.js"></script>
+<script src="childbrowser.js"></script>
 
 <link rel="stylesheet" href="css/style.css"
     
@@ -25,18 +24,16 @@
 	</div><!-- /header -->
 <div data-role="content">   
 
-<p><a href="#" 'pdf/M300.pdf', true, downloadOkCallbak, downloadErCallbak)> Download M300.pdf </a></p>
-<p><a href="#" onclick="window.plugins.pdfViewer.showPdf('pdfs/M300.pdf');"> open pdf M300.pdf</a></p>
-<br>
-<br>
-<br>
-
+<a data-role="button" href="http://www.apawood.org/buildertips/pdfs/M300.pdf">View PDF from server</a>
+<a data-role="button" href="pdfs/M300.pdf">View local PDF</a>
+<a data-role="button" href="#" data-role="button" rel="external" onClick="window.plugins.childBrowser.showWebPage('http://www.apawood.org/buildertips/pdfs/M300.pdf');">View PDF from server in childbrowser</a><br>
     
     <ul data-role="listview" data-split-icon="gear" data-filter="true" data-filter-placeholder="Search Builder Tips" data-inset="true" data-theme="a">
     <li><a href="pages/m300.html">
 				<h3>Cut Callbacks with Proper Spacing and Nailing</h3>
 				<p>M300</p>
 				</a><a data-ajax="false" href="pdfs/M300.pdf">View PDF</a>
+                
 			</li>
 			<li><a href="f435.html">
 				<h3>APA Narrow Wall Bracing Method Framing Tips</h3>

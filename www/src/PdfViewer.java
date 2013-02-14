@@ -1,24 +1,16 @@
-/*
- * PhoneGap is available under *either* the terms of the modified BSD license *or* the
- * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
- *
- * Copyright (c) 2005-2010, Nitobi Software Inc.
- * Copyright (c) 2010, IBM Corporation
- */
-package com.phonegap.plugins.pdfViewer;
+// Java Document
+package org.apache.cordova.plugin;
 
-import java.io.File;
-
+import org.apache.cordova.api.Plugin;
+import org.apache.cordova.api.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
-import android.content.Intent;
-import android.net.Uri;
-
-import com.phonegap.api.Plugin;
-import com.phonegap.api.PluginResult;
-
-public class PdfViewer extends Plugin {
+/**
+ * This class echoes a string called from JavaScript.
+ */
+public class PDFviewer extends Plugin {
 
     /**
      * Executes the request and returns PluginResult.
@@ -29,74 +21,21 @@ public class PdfViewer extends Plugin {
      * @return              A PluginResult object with a status and message.
      */
     public PluginResult execute(String action, JSONArray args, String callbackId) {
-    	
-    	   	
-        PluginResult.Status status = PluginResult.Status.OK;
-        String result = "";
-
         try {
-            if (action.equals("showPdf")) {
-                result = this.showPdf(args.getString(0));
-                if (result.length() > 0) {
-                    status = PluginResult.Status.ERROR;
+            if (action.equals("viewPDF")) {
+                String filename = args.getString(0); 
+                if (filename != null && filename.length() > 0) { 
+                    return new PluginResult(PluginResult.Status.OK, echo);
+					
+					
+                } else {
+                    return new PluginResult(PluginResult.Status.ERROR);
                 }
+            } else {
+                return new PluginResult(PluginResult.Status.INVALID_ACTION);
             }
-            return new PluginResult(status, result);
         } catch (JSONException e) {
             return new PluginResult(PluginResult.Status.JSON_EXCEPTION);
         }
     }
-
-    /**
-     * Identifies if action to be executed returns a value and should be run synchronously.
-     *
-     * @param action    The action to execute
-     * @return          T=returns value
-     */
-    public boolean isSynch(String action) {
-        return false;
-    }
-
-    /**
-     * Called by AccelBroker when listener is to be shut down.
-     * Stop listener.
-     */
-    public void onDestroy() {
-    }
-
-    
-    
-    //--------------------------------------------------------------------------
-    // LOCAL METHODS
-    //--------------------------------------------------------------------------
-
-    public String showPdf(String fileName) {
-    	
-    	File file = new File(fileName);
-
-        if (file.exists()) {
-        	try {
-	        	Uri path = Uri.fromFile(file);
-	            Intent intent = new Intent(Intent.ACTION_VIEW);
-	            intent.setDataAndType(path, "application/pdf");
-	            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-	            
-            
-                //intent.setData(Uri.parse(fileName));
-                this.ctx.startActivity(intent);
-                return "";
-            } catch (android.content.ActivityNotFoundException e) {
-                System.out.println("PdfViewer: Error loading url "+fileName+":"+ e.toString());
-                return e.toString();
-            }            
-
-        }else{
-        	return "file not found";
-        }
-    	
-    	
-    	
-        
-    }
-
 }
